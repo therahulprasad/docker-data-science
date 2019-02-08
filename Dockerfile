@@ -1,6 +1,6 @@
 # Build it from this image if you dont have base image or you want to build everything from scratch
-#FROM ubuntu:bionic
-FROM therahulprasad/data-science:conda
+FROM ubuntu:bionic
+#FROM therahulprasad/data-science:conda
 # Use this during development as it will only install diff. 
 #FROM therahulprasad/linkedin-python-data-science:v0.1
 # FIXME: By using pyenv where I can specify a version that will be installed
