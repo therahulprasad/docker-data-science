@@ -15,7 +15,5 @@ RUN conda -V || bash /installer/anaconda3.sh -b -p /anaconda3
 RUN (ls /installer/anaconda3.sh && rm /installer/anaconda3.sh); exit 0;
 ENV PATH /anaconda3/bin:$PATH
 
-RUN conda install keras
-
 RUN ls /workdir || mkdir /workdir
 CMD ["jupyter", "notebook", "--no-browser", "--allow-root", "--ip=0.0.0.0", "--notebook-dir=/workdir"]
