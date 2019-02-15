@@ -10,9 +10,9 @@ FROM ubuntu:bionic
 #EXPOSE 8888
 RUN apt update && apt install -y curl
 RUN ls /installer || mkdir /installer
-RUN conda -V || curl https://repo.anaconda.com/archive/Anaconda2-2018.12-Linux-x86_64.sh -o /installer/anaconda3.sh
-RUN conda -V || bash /installer/anaconda3.sh -b -p /anaconda3
-RUN (ls /installer/anaconda3.sh && rm /installer/anaconda3.sh); exit 0;
+RUN conda -V || curl https://repo.anaconda.com/archive/Anaconda2-2018.12-Linux-x86_64.sh -o /installer/anaconda2.sh
+RUN conda -V || bash /installer/anaconda2.sh -b -p /anaconda2
+RUN (ls /installer/anaconda2.sh && rm /installer/anaconda2.sh); exit 0;
 ENV PATH /anaconda3/bin:$PATH
 
 RUN conda install --yes keras opencv
