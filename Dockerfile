@@ -16,6 +16,8 @@ RUN (ls /installer/anaconda2.sh && rm /installer/anaconda2.sh); exit 0;
 ENV PATH /anaconda2/bin:$PATH
 
 RUN conda install --yes keras opencv
+RUN conda install -y -c conda-forge jupyter_contrib_nbextensions
+RUN conda install -y -c conda-forge jupyter_nbextensions_configurator
 RUN pip install imutils
 
 RUN ls /workdir || mkdir /workdir
